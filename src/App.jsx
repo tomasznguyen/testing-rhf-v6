@@ -18,7 +18,8 @@ export default function App({ login }) {
       <label htmlFor="email">email</label>
       <input
         id="email"
-        {...register("email", {
+        name="email"
+        ref={register({
           required: "required",
           pattern: {
             value: /\S+@\S+.\S+/,
@@ -31,7 +32,8 @@ export default function App({ login }) {
       <label htmlFor="password">password</label>
       <input
         id="password"
-        {...register("password", {
+        name="password"
+        ref={register({
           required: "required",
           minLength: {
             value: 5,
